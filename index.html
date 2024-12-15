@@ -31,27 +31,71 @@
     <img src="./images/logo.svg" alt="logo">
   </header>
   <main>
-    
+    <div class="card">
+      <form novalidate>
+        <fieldset class="form_control">
+          <div class="label_group">
+            <label> Bill</label>
+          </div>
+          <div class="input_group">
+            <img src="./images/icon-dollar.svg" alt="icon-dollar">
+            <input type="text" name="bill" placeholder="0.00">
+          </div>
+        </fieldset>
+        <fieldset class="form-select">
+          <label>Select Tip %</label>
+          <div class="options">
+            <div class="option" active value="5%">
+              5%
+            </div>
+            <div class="option" value="10%">
+              10%
+            </div>
+            <div class="option" value="15%">
+              15%
+            </div>
+            <div class="option" value="25%">
+              25%
+            </div>
+            <div class="option" value="50%">
+              50%
+            </div>
+            <div class="option" value="0%">
+              <input type="text" name="tips" placeholder="Custom">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form_control">
+          <div class="label_group">
+            <label> Number of People</label>
+          </div>
+          <div class="input_group">
+            <img src="./images/icon-person.svg" alt="icon-person">
+            <input type="text" name="nop" placeholder="0">
+          </div>
+        </fieldset>
+      </form>
+      <div class="bill">
+        <div class="result">
+          <div class="text">
+            <h2> Tip Amount</h2>
+            <span> / person</span>
+          </div>
+          <div class="amount">$4.27</div>
+        </div>
+        <div class="result">
+          <div class="text">
+            <h2>Total</h2>
+            <span> / person</span>
+          </div>
+          <div class="amount">$32.79</div>
+        </div>
+        <div class="reset">
+          Reset
+        </div>
+      </div>
+    </div>
   </main>
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
