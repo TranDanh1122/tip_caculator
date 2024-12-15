@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -14,8 +15,138 @@
     --white: hsl(0, 0%, 100%);
 }
 
-html,body {
+html,
+body {
     width: 100%;
     height: 100%;
     font-size: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5.5rem;
+    background-color: var(--light_grayish_cyan);
+    font-family: "Space Mono", sans-serif;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    max-width: 5.5rem;
+    max-height: 3.3125rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 57.5rem;
+    background-color: white;
+    display: flex;
+    gap: 3rem
+}
+
+form {
+    flex-basis: calc(50% - 1.5rem);
+    padding-top: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.5rem;
+}
+
+fieldset {
+    border: unset;
+}
+label {
+    color: var(--dark_grayish_cyan);
+    font-weight: 700;
+
+}
+.form_control {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    position: relative;
+}
+
+.form_control.label_group {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+input {
+    width: 100%;
+    padding-top: .5rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+    text-align: right;
+    border: unset;
+    background-color: var(--very_light_grayish_cyan);
+    border-radius: .25rem;
+    color: var(--very_dark_cyan);
+    cursor: pointer;
+    outline: none;
+}
+
+input:focus,
+input:active {
+    border: 2px solid var(--strong_cyan);
+}
+
+.form_control img {
+    position: absolute;
+    width: 0.7rem;
+    height: 1rem;
+    top: calc(50% + 0.625rem / 2);
+    left: 1.25rem;
+}
+.form_select {
+    display: flex;
+    gap: 1rem;
+    flex-flow: column nowrap;
+}
+
+.form_select .options {
+    display: grid;
+    grid-template: repeat(2, minmax(3rem, 1fr)) / repeat(3, minmax(7.5rem, 1fr));
+    gap: 1rem
+}
+
+.form_select .option {
+    padding: .5rem 2.5rem;
+    background-color: var(--very_dark_cyan);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.form_select .custom {
+    padding: unset !important;
+    background-color: unset !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom input {
+    text-align: center;
+    padding-right: unset;
+    height: 100%;
+}
+
+.form_select .option[active] {
+    background-color: var(--strong_cyan);
+}
+
+.bill {
+    flex-basis: calc(50% - 1.5rem);
 }

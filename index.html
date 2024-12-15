@@ -27,22 +27,21 @@
 </head>
 
 <body>
-  <header>
-    <img src="./images/logo.svg" alt="logo">
-  </header>
-  <main>
+    <img src="./images/logo.svg" alt="logo" class="logo">
     <div class="card">
       <form novalidate>
         <fieldset class="form_control">
           <div class="label_group">
             <label> Bill</label>
+            <span class="error"></span>
+
           </div>
           <div class="input_group">
             <img src="./images/icon-dollar.svg" alt="icon-dollar">
             <input type="text" name="bill" placeholder="0.00">
           </div>
         </fieldset>
-        <fieldset class="form-select">
+        <fieldset class="form_select">
           <label>Select Tip %</label>
           <div class="options">
             <div class="option" active value="5%">
@@ -60,7 +59,7 @@
             <div class="option" value="50%">
               50%
             </div>
-            <div class="option" value="0%">
+            <div class="option custom" value="0%">
               <input type="text" name="tips" placeholder="Custom">
             </div>
           </div>
@@ -68,6 +67,7 @@
         <fieldset class="form_control">
           <div class="label_group">
             <label> Number of People</label>
+            <span class="error"></span>
           </div>
           <div class="input_group">
             <img src="./images/icon-person.svg" alt="icon-person">
@@ -95,7 +95,7 @@
         </div>
       </div>
     </div>
-  </main>
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
