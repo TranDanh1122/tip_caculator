@@ -19,14 +19,19 @@ html,
 body {
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     font-size: 16px;
+    font-weight: 700;
+    font-family: "Space Mono", sans-serif;
+}
+
+main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     gap: 5.5rem;
     background-color: var(--light_grayish_cyan);
-    font-family: "Space Mono", sans-serif;
 }
 
 img {
@@ -36,8 +41,8 @@ img {
 }
 
 .logo {
-    max-width: 5.5rem;
-    max-height: 3.3125rem;
+    width: 5.5rem;
+    height: 3.3125rem;
 }
 
 .card {
@@ -45,14 +50,13 @@ img {
     max-width: 57.5rem;
     background-color: white;
     display: flex;
-    gap: 3rem
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3rem;
 }
 
 form {
     flex-basis: calc(50% - 1.5rem);
-    padding-top: 3rem;
-    padding-left: 3rem;
-    padding-bottom: 3rem;
     display: flex;
     flex-flow: column nowrap;
     gap: 2.5rem;
@@ -61,11 +65,11 @@ form {
 fieldset {
     border: unset;
 }
+
 label {
     color: var(--dark_grayish_cyan);
-    font-weight: 700;
-
 }
+
 .form_control {
     display: flex;
     flex-flow: column nowrap;
@@ -103,9 +107,10 @@ input:active {
     position: absolute;
     width: 0.7rem;
     height: 1rem;
-    top: calc(50% + 0.625rem / 2);
+    top: calc(50% + 0.625rem);
     left: 1.25rem;
 }
+
 .form_select {
     display: flex;
     gap: 1rem;
@@ -119,14 +124,19 @@ input:active {
 }
 
 .form_select .option {
-    padding: .5rem 2.5rem;
+    padding: .5rem 0;
+    width: 100%;
     background-color: var(--very_dark_cyan);
     text-align: center;
     color: white;
-    font-weight: 700;
     font-size: 1.5rem;
     border-radius: .25rem;
     cursor: pointer;
+}
+
+.form_select .option:hover {
+    background-color: hsl(172, 61%, 77%);
+    color: var(--very_dark_cyan);
 }
 
 .form_select .custom {
@@ -149,4 +159,81 @@ input:active {
 
 .bill {
     flex-basis: calc(50% - 1.5rem);
+    background-color: var(--very_dark_cyan);
+    color: white;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-radius: .5rem;
+}
+
+.bill .result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+.result h2 {
+    font-size: 1rem;
+}
+
+.result span {
+    font-size: 0.8125rem;
+    color: var(--grayish_cyan);
+}
+
+.result .amount {
+    color: var(--strong_cyan);
+    letter-spacing: -1px;
+    font-size: 3rem;
+}
+
+.bill .reset {
+    background-color: var(--strong_cyan);
+    color: var(--very_dark_cyan);
+    width: 100%;
+    padding: .75rem 0;
+    border-radius: .25rem;
+    text-align: center;
+    margin-top: 7.25rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.bill .reset:hover {
+    background-color: hsl(172, 61%, 77%);
+}
+
+.bill .reset[empty] {
+    background-color: hsl(183, 78%, 24%);
+    color: hsl(183, 100%, 15%);
+}
+
+@media (max-width: 767px) {
+    main {
+        gap: 2rem;
+    }
+    .logo {
+        margin-top: 2rem;
+    }
+    .card {
+        flex-flow: column nowrap;
+        padding: 1rem;
+    }
+
+    .form_select .options {
+        grid-template: repeat(2, minmax(3rem, 1fr)) / repeat(3, minmax(4rem, 1fr));
+        gap: .5rem
+    }
+    .bill {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .bill .result {
+        margin-top: 1rem;
+    }
+
+    .bill .reset {
+        margin-top: 1rem;
+    }
 }

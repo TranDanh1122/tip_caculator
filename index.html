@@ -27,7 +27,9 @@
 </head>
 
 <body>
+  <main>
     <img src="./images/logo.svg" alt="logo" class="logo">
+
     <div class="card">
       <form novalidate>
         <fieldset class="form_control">
@@ -44,22 +46,22 @@
         <fieldset class="form_select">
           <label>Select Tip %</label>
           <div class="options">
-            <div class="option" active value="5%">
+            <div class="option" value="5">
               5%
             </div>
-            <div class="option" value="10%">
+            <div class="option" value="10">
               10%
             </div>
-            <div class="option" value="15%">
+            <div class="option" value="15">
               15%
             </div>
-            <div class="option" value="25%">
+            <div class="option" value="25">
               25%
             </div>
-            <div class="option" value="50%">
+            <div class="option" value="50">
               50%
             </div>
-            <div class="option custom" value="0%">
+            <div class="option custom" value="0">
               <input type="text" name="tips" placeholder="Custom">
             </div>
           </div>
@@ -81,26 +83,30 @@
             <h2> Tip Amount</h2>
             <span> / person</span>
           </div>
-          <div class="amount">$4.27</div>
+          <div class="amount">$0.00</div>
         </div>
         <div class="result">
           <div class="text">
             <h2>Total</h2>
             <span> / person</span>
           </div>
-          <div class="amount">$32.79</div>
+          <div class="amount">$0.00</div>
         </div>
-        <div class="reset">
+        <div empty class="reset">
           Reset
         </div>
       </div>
     </div>
+  </main>
 
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://www.frontendmentor.io/profile/TranDanh1122">TRần Danh</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/TranDanh1122">TRần Danh</a>.
+    </div>
+  </footer>
+
 
   <script src="./script.js"></script>
 </body>
