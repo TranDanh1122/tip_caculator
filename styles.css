@@ -77,7 +77,7 @@ label {
     position: relative;
 }
 
-.form_control.label_group {
+.form_control .label_group {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -101,6 +101,17 @@ input {
 input:focus,
 input:active {
     border: 2px solid var(--strong_cyan);
+}
+
+input[error],
+input[error]:focus,
+input[error]:active {
+    border: 2px solid hsl(13, 70%, 60%);
+}
+
+.label_group .error {
+    color: hsl(13, 70%, 60%);
+    text-align: right;
 }
 
 .form_control img {
@@ -213,9 +224,11 @@ input:active {
     main {
         gap: 2rem;
     }
+
     .logo {
         margin-top: 2rem;
     }
+
     .card {
         flex-flow: column nowrap;
         padding: 1rem;
@@ -225,10 +238,12 @@ input:active {
         grid-template: repeat(2, minmax(3rem, 1fr)) / repeat(3, minmax(4rem, 1fr));
         gap: .5rem
     }
+
     .bill {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
     .bill .result {
         margin-top: 1rem;
     }
